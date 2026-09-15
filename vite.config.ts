@@ -5,7 +5,7 @@ import netlify from "@netlify/vite-plugin-tanstack-start";
 
 export default defineConfig({
   build: {
-    cssMinify: "esbuild",
+    cssMinify: false,
   },
   plugins: [tanstackStart(), react(), netlify()],
 });

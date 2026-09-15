@@ -777,7 +777,7 @@ function Footer() {
           <p className={`${mono} mt-16 text-ash`}>
             © {new Date().getFullYear()} {studio.name}. All rights reserved.
           </p>
-          <p className={`${mono} mt-3 text-ash/70`}>Designed &amp; Developed by Vince &amp; Co</p>
+          <a href="https://www.instagram.com/vinceandco.in/" target="_blank" rel="noopener noreferrer" className={`${mono} mt-3 text-ash/70 transition-opacity hover:opacity-70`}>Designed &amp; Developed by Vince &amp; Co</a>
         </div>
         <div className="min-h-[340px] border-t border-border md:col-span-6 md:border-l md:border-t-0">
           <iframe
