@@ -1,11 +1,6 @@
 {
   "version": 1,
-  "asset_id": "5bf022c0-7426-456c-8e5c-d1905b0e7cef",
-  "project_id": "c4169d9c-2c42-4af9-bce9-6eb386556b12",
-  "url": "/__l5e/assets-v1/5bf022c0-7426-456c-8e5c-d1905b0e7cef/studio-film.mp4",
-  "r2_key": "a/v1/c4169d9c-2c42-4af9-bce9-6eb386556b12/5bf022c0-7426-456c-8e5c-d1905b0e7cef/studio-film.mp4",
   "original_filename": "studio-film.mp4",
-  "size": 2769062,
   "content_type": "video/mp4",
-  "created_at": "2026-09-15T06:36:01Z"
+  "url": "/hero.mp4"
 }
