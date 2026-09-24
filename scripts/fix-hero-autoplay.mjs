@@ -1,6 +1,11 @@
 import fs from "node:fs";
 import path from "node:path";
 
+// Values used only while generating the Hero source below.
+// They mirror the constants imported by src/routes/index.tsx.
+const mono = "font-mono text-[0.62rem] uppercase tracking-[0.22em]";
+const studio = { city: "Rohini, New Delhi", tagline: "Custom tattoo atelier in Rohini, New Delhi" };
+
 const file = path.resolve("src/routes/index.tsx");
 let source = fs.readFileSync(file, "utf8");
 
