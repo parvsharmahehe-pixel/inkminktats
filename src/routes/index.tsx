@@ -164,14 +164,15 @@ function Hero() {
         </span>
       </div>
 
-      {/* Brand mark: signature placement, clear of the navigation and hero copy. */}
-      <div className="absolute right-5 top-24 z-30 md:right-10 md:top-28">
-        <div className="rounded-full bg-black/80 p-2 shadow-[0_18px_50px_rgba(0,0,0,0.45)] backdrop-blur-[2px]">
+      {/* Ink Mink logo — hero brand mark, visible immediately on first load. */}
+      <div className="pointer-events-none absolute right-5 top-[5.5rem] z-30 md:right-10 md:top-[6.5rem]">
+        <div className="relative rounded-full border border-yellow-400/70 bg-black/75 p-2.5 shadow-[0_12px_45px_rgba(0,0,0,0.55)] backdrop-blur-sm">
           <img
             src="/favicon.ico"
             alt="Ink Mink Tattooz"
-            className="h-24 w-24 object-contain md:h-36 md:w-36"
+            className="h-24 w-24 object-contain md:h-32 md:w-32 lg:h-36 lg:w-36"
           />
+          <span className="absolute -bottom-1 -right-1 h-3 w-3 rounded-full border-2 border-black bg-yellow-400" />
         </div>
       </div>
 
