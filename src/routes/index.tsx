@@ -169,7 +169,7 @@ function Hero() {
         <div className="flex h-[5.25rem] w-[9.5rem] items-center justify-center rounded-[1.4rem] border-2 border-yellow-400 bg-black px-3 shadow-[0_14px_45px_rgba(0,0,0,0.7)] md:h-24 md:w-44 md:rounded-[1.7rem]">
           <div className="flex items-center gap-2.5">
             <img
-              src="/favicon.ico"
+              src="/ink-mink-logo.png"
               alt=""
               aria-hidden="true"
               className="h-10 w-10 object-contain md:h-14 md:w-14"
