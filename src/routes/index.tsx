@@ -164,15 +164,25 @@ function Hero() {
         </span>
       </div>
 
-      {/* Ink Mink logo — hero brand mark, visible immediately on first load. */}
-      <div className="pointer-events-none absolute right-5 top-[5.5rem] z-30 md:right-10 md:top-[6.5rem]">
-        <div className="relative rounded-full border border-yellow-400/70 bg-black/75 p-2.5 shadow-[0_12px_45px_rgba(0,0,0,0.55)] backdrop-blur-sm">
-          <img
-            src="/favicon.ico"
-            alt="Ink Mink Tattooz"
-            className="h-24 w-24 object-contain md:h-32 md:w-32 lg:h-36 lg:w-36"
-          />
-          <span className="absolute -bottom-1 -right-1 h-3 w-3 rounded-full border-2 border-black bg-yellow-400" />
+      {/* Ink Mink brand mark — deliberately visible on the first viewport. */}
+      <div className="pointer-events-none absolute right-6 top-[6.5rem] z-[60] md:right-10 md:top-[7rem]">
+        <div className="flex h-[5.25rem] w-[9.5rem] items-center justify-center rounded-[1.4rem] border-2 border-yellow-400 bg-black px-3 shadow-[0_14px_45px_rgba(0,0,0,0.7)] md:h-24 md:w-44 md:rounded-[1.7rem]">
+          <div className="flex items-center gap-2.5">
+            <img
+              src="/favicon.ico"
+              alt=""
+              aria-hidden="true"
+              className="h-10 w-10 object-contain md:h-14 md:w-14"
+            />
+            <div className="leading-none">
+              <div className="text-[0.8rem] font-black uppercase tracking-[-0.04em] text-[#F5F0E6] md:text-[1rem]">
+                Ink Mink
+              </div>
+              <div className="mt-1 text-[0.72rem] font-black uppercase tracking-[0.08em] text-yellow-400 md:text-[0.82rem]">
+                Tattooz
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
