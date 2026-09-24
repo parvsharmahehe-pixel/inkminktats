@@ -164,6 +164,17 @@ function Hero() {
         </span>
       </div>
 
+      {/* Brand mark: signature placement, clear of the navigation and hero copy. */}
+      <div className="absolute right-5 top-24 z-30 md:right-10 md:top-28">
+        <div className="rounded-full bg-black/80 p-2 shadow-[0_18px_50px_rgba(0,0,0,0.45)] backdrop-blur-[2px]">
+          <img
+            src="/favicon.ico"
+            alt="Ink Mink Tattooz"
+            className="h-24 w-24 object-contain md:h-36 md:w-36"
+          />
+        </div>
+      </div>
+
       <div className="relative z-10 flex min-h-[100svh] flex-col justify-end pb-14 pl-5 pr-5 pt-32 md:pb-20 md:pl-[6.5rem] md:pr-10">
         <span className={`${mono} text-oxblood`}>[ 001 ] Tattoo atelier</span>
         <h1 className="mt-6 text-[19vw] font-extrabold uppercase leading-[0.78] tracking-[-0.05em] text-bone md:text-[13.5vw]">
