@@ -1,3 +1,32 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "./ink-mink-theme.css";
+
+
+/* Ink Mink live theme enforcement — black + yellow */
+:root {
+  --ink-mink-black: #050505;
+  --ink-mink-yellow: #F5C400;
+  --ink-mink-offwhite: #F5F0E6;
+}
+
+html, body {
+  background: var(--ink-mink-black) !important;
+  color: var(--ink-mink-offwhite) !important;
+}
+
+/* Force legacy red/crimson/rose accent utilities to the Ink Mink yellow. */
+[class*="text-red-"], [class*="text-rose-"], [class*="text-crimson-"], [class*="text-oxblood-"] {
+  color: var(--ink-mink-yellow) !important;
+}
+[class*="bg-red-"], [class*="bg-rose-"], [class*="bg-crimson-"], [class*="bg-oxblood-"] {
+  background-color: var(--ink-mink-yellow) !important;
+}
+[class*="border-red-"], [class*="border-rose-"], [class*="border-crimson-"], [class*="border-oxblood-"] {
+  border-color: var(--ink-mink-yellow) !important;
+}
+
+::selection {
+  background: var(--ink-mink-yellow) !important;
+  color: var(--ink-mink-black) !important;
+}
