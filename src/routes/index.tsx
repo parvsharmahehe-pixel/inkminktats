@@ -164,12 +164,12 @@ function Hero() {
         </span>
       </div>
 
-      {/* Official Ink Mink logo — clean standalone brand mark. */}
-      <div className="pointer-events-none absolute right-5 top-[5.75rem] z-30 md:right-10 md:top-[6.75rem] lg:right-14 lg:top-28">
+      {/* Official logo: fixed directly into the hero composition so it is always visible. */}
+      <div className="absolute left-1/2 top-[5.5rem] z-[45] -translate-x-1/2 md:left-auto md:right-10 md:top-[7rem] md:translate-x-0 lg:right-16">
         <img
           src="/ink-mink-logo.png"
           alt="Ink Mink Tattooz"
-          className="h-28 w-28 object-contain drop-shadow-[0_18px_38px_rgba(0,0,0,0.65)] sm:h-32 sm:w-32 md:h-40 md:w-40 lg:h-48 lg:w-48"
+          className="block h-32 w-32 object-contain drop-shadow-[0_16px_35px_rgba(0,0,0,0.8)] sm:h-36 sm:w-36 md:h-44 md:w-44 lg:h-52 lg:w-52"
         />
       </div>
 
