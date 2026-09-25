@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Reveal } from "@/components/Reveal";
 import heroVideo from "@/assets/hero.mp4.asset.json";
 import heroPoster from "@/assets/hero-frame.jpg";
-import { studio, studioImage, services, portfolio, process, faqs, artists, piercing, nails } from "@/content/site";
+import { studio, studioImage, services, portfolio, tattooTypes, process, faqs, artists, piercing, nails } from "@/content/site";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -46,10 +46,11 @@ export const Route = createFileRoute("/")({
 
 const NAV = [
   { label: "Work", href: "#work", n: "01" },
-  { label: "Studio", href: "#studio", n: "02" },
-  { label: "Services", href: "#services", n: "03" },
-  { label: "Process", href: "#process", n: "04" },
-  { label: "Visit", href: "#visit", n: "05" },
+  { label: "Tattoo Types", href: "#tattoo-types", n: "02" },
+  { label: "Studio", href: "#studio", n: "03" },
+  { label: "Services", href: "#services", n: "04" },
+  { label: "Process", href: "#process", n: "05" },
+  { label: "Visit", href: "#visit", n: "06" },
 ];
 
 const mono = "font-mono text-[0.62rem] uppercase tracking-[0.22em]";
@@ -127,6 +128,7 @@ function Home() {
       <Hero />
       <Ticker />
       <Work />
+      <TattooTypes />
       <Studio />
       <Artists />
       <Services />
@@ -369,11 +371,71 @@ function Work() {
   );
 }
 
+
+function TattooTypes() {
+  return (
+    <section id="tattoo-types" className="border-t border-border px-5 py-20 md:px-10 md:py-32">
+      <Reveal>
+        <SectionMark n="003" label="Tattoo types / choose a direction" />
+        <div className="grid gap-8 md:grid-cols-12 md:items-end">
+          <h2 className="text-[16vw] font-extrabold uppercase leading-[0.78] tracking-[-0.06em] text-bone md:col-span-8 md:text-[9vw]">
+            Tattoo
+            <br />
+            <span className="text-oxblood">types.</span>
+          </h2>
+          <p className="max-w-md text-sm leading-relaxed text-muted-foreground md:col-span-4 md:pb-2">
+            Not sure what style fits your idea? Start here. These are the tattoo directions
+            represented in our current work — use the images as a visual starting point, then we
+            build the piece around you.
+          </p>
+        </div>
+      </Reveal>
+
+      <div className="mt-14 grid gap-3 sm:grid-cols-2">
+        {tattooTypes.map((type, i) => (
+          <Reveal key={type.title} delay={i * 70}>
+            <a
+              href="#work"
+              className="group relative block min-h-[28rem] overflow-hidden border border-border bg-charcoal"
+            >
+              <img
+                src={type.image}
+                alt={type.title}
+                loading="lazy"
+                className="absolute inset-0 h-full w-full object-cover grayscale-[0.3] transition duration-[1200ms] ease-out group-hover:scale-[1.04] group-hover:grayscale-0"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/45 to-background/5 transition-colors duration-500 group-hover:via-background/55" />
+              <div className="relative flex min-h-[28rem] flex-col justify-between p-5 md:p-7">
+                <div className="flex items-start justify-between">
+                  <span className={`${mono} text-bone/70`}>{type.kicker}</span>
+                  <span className={`${mono} text-bone/70 transition-transform duration-300 group-hover:translate-x-1`}>
+                    ↗
+                  </span>
+                </div>
+                <div>
+                  <h3 className="text-5xl font-extrabold uppercase leading-[0.82] tracking-[-0.05em] text-bone md:text-6xl">
+                    {type.title}
+                  </h3>
+                  <p className="mt-4 max-w-md text-sm leading-relaxed text-bone/75">{type.copy}</p>
+                  <div className={`${mono} mt-6 flex items-center gap-3 text-oxblood`}>
+                    <span className="h-px w-10 bg-oxblood transition-all duration-300 group-hover:w-16" />
+                    View work
+                  </div>
+                </div>
+              </div>
+            </a>
+          </Reveal>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function Studio() {
   return (
     <section id="studio" className="border-t border-border px-5 py-20 md:px-10 md:py-32">
       <Reveal>
-        <SectionMark n="003" label="The room" />
+        <SectionMark n="004" label="The room" />
       </Reveal>
       <div className="relative grid gap-10 md:grid-cols-12">
         <Reveal className="md:col-span-7">
@@ -423,7 +485,7 @@ function Artists() {
   return (
     <section id="artists" className="border-t border-border px-5 py-20 md:px-10 md:py-32">
       <Reveal>
-        <SectionMark n="004" label="Resident artists" />
+        <SectionMark n="005" label="Resident artists" />
       </Reveal>
       <div className="border-t border-border">
         {artists.map((a, i) => (
@@ -450,7 +512,7 @@ function Services() {
   return (
     <section id="services" className="border-t border-border px-5 py-20 md:px-10 md:py-32">
       <Reveal>
-        <SectionMark n="005" label="Disciplines" />
+        <SectionMark n="006" label="Disciplines" />
       </Reveal>
       <div className="border-t border-border">
         {services.map((s, i) => (
@@ -477,7 +539,7 @@ function Piercing() {
   return (
     <section id="piercing" className="border-t border-border px-5 py-20 md:px-10 md:py-32">
       <Reveal>
-        <SectionMark n="006" label="Piercing price list" />
+        <SectionMark n="007" label="Piercing price list" />
         <h2 className="max-w-3xl text-[11vw] font-extrabold uppercase leading-[0.84] tracking-[-0.05em] text-bone md:text-[5.5vw]">
           Pier<span className="text-oxblood">cings.</span>
         </h2>
@@ -522,7 +584,7 @@ function Nails() {
   return (
     <section id="nails" className="border-t border-border px-5 py-20 md:px-10 md:py-32">
       <Reveal>
-        <SectionMark n="007" label="Ink Mink Nail / price list" />
+        <SectionMark n="008" label="Ink Mink Nail / price list" />
         <h2 className="max-w-3xl text-[11vw] font-extrabold uppercase leading-[0.84] tracking-[-0.05em] text-bone md:text-[5.5vw]">
           Nail<span className="text-oxblood">s.</span>
         </h2>
@@ -564,7 +626,7 @@ function Process() {
   return (
     <section id="process" className="border-t border-border px-5 py-20 md:px-10 md:py-32">
       <Reveal>
-        <SectionMark n="008" label="Method" />
+        <SectionMark n="009" label="Method" />
         <h2 className="max-w-3xl text-[11vw] font-extrabold uppercase leading-[0.84] tracking-[-0.05em] text-bone md:text-[5.5vw]">
           Four steps from idea to <span className="text-oxblood">healed ink.</span>
         </h2>
@@ -604,7 +666,7 @@ function Booking() {
   return (
     <section id="book" className="border-t border-border px-5 py-20 md:px-10 md:py-32">
       <Reveal>
-        <SectionMark n="009" label="Enquiry" />
+        <SectionMark n="010" label="Enquiry" />
       </Reveal>
       <div className="grid gap-12 md:grid-cols-12 md:gap-x-6">
         <Reveal className="md:col-span-5">
@@ -706,7 +768,7 @@ function Faq() {
   return (
     <section className="border-t border-border px-5 py-20 md:px-10 md:py-32">
       <Reveal>
-        <SectionMark n="010" label="Questions" />
+        <SectionMark n="011" label="Questions" />
       </Reveal>
       <div className="grid gap-8 md:grid-cols-12 md:gap-x-6">
         <Reveal className="md:col-span-4">
@@ -757,7 +819,7 @@ function Footer() {
     <footer id="visit" className="border-t border-border">
       <div className="grid md:grid-cols-12">
         <div className="px-5 py-16 md:col-span-6 md:px-10 md:py-24">
-          <SectionMark n="011" label="Visit" />
+          <SectionMark n="012" label="Visit" />
           <h2 className="text-[13vw] font-extrabold uppercase leading-[0.82] tracking-[-0.05em] text-bone md:text-[5vw]">
             Rohini,
             <br />
