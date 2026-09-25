@@ -71,6 +71,34 @@ export const portfolio = [
   { src: studioImg, alt: "Interior of the studio", category: "Studio", tall: false },
 ];
 
+
+export const tattooTypes = [
+  {
+    title: "Black & Grey",
+    kicker: "01 / SHADING",
+    copy: "Portraits, realism and deep tonal work built around contrast, texture and controlled shading.",
+    image: work3,
+  },
+  {
+    title: "Fine Line",
+    kicker: "02 / DETAIL",
+    copy: "Delicate linework, script and minimal pieces where clean placement and precision do the talking.",
+    image: work7,
+  },
+  {
+    title: "Colour",
+    kicker: "03 / COLOUR",
+    copy: "Floral and illustrative colour work with bold shapes designed to stay readable as they heal.",
+    image: work4,
+  },
+  {
+    title: "Mandala",
+    kicker: "04 / ORNAMENT",
+    copy: "Ornamental geometry and dotwork shaped to the body's natural lines and symmetry.",
+    image: work6,
+  },
+];
+
 export const artists = [
   { name: "Kamal", experience: "15 years of experience" },
   { name: "Moni Tamang", experience: "9 years of experience" },
