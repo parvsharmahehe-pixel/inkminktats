@@ -164,26 +164,13 @@ function Hero() {
         </span>
       </div>
 
-      {/* Ink Mink brand mark — deliberately visible on the first viewport. */}
-      <div className="pointer-events-none absolute right-6 top-[6.5rem] z-[60] md:right-10 md:top-[7rem]">
-        <div className="flex h-[5.25rem] w-[9.5rem] items-center justify-center rounded-[1.4rem] border-2 border-yellow-400 bg-black px-3 shadow-[0_14px_45px_rgba(0,0,0,0.7)] md:h-24 md:w-44 md:rounded-[1.7rem]">
-          <div className="flex items-center gap-2.5">
-            <img
-              src="/ink-mink-logo.png"
-              alt=""
-              aria-hidden="true"
-              className="h-10 w-10 object-contain md:h-14 md:w-14"
-            />
-            <div className="leading-none">
-              <div className="text-[0.8rem] font-black uppercase tracking-[-0.04em] text-[#F5F0E6] md:text-[1rem]">
-                Ink Mink
-              </div>
-              <div className="mt-1 text-[0.72rem] font-black uppercase tracking-[0.08em] text-yellow-400 md:text-[0.82rem]">
-                Tattooz
-              </div>
-            </div>
-          </div>
-        </div>
+      {/* Official Ink Mink logo — clean standalone brand mark. */}
+      <div className="pointer-events-none absolute right-5 top-[5.75rem] z-30 md:right-10 md:top-[6.75rem] lg:right-14 lg:top-28">
+        <img
+          src="/ink-mink-logo.png"
+          alt="Ink Mink Tattooz"
+          className="h-28 w-28 object-contain drop-shadow-[0_18px_38px_rgba(0,0,0,0.65)] sm:h-32 sm:w-32 md:h-40 md:w-40 lg:h-48 lg:w-48"
+        />
       </div>
 
       <div className="relative z-10 flex min-h-[100svh] flex-col justify-end pb-14 pl-5 pr-5 pt-32 md:pb-20 md:pl-[6.5rem] md:pr-10">
